@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <TabPane prefHeight="592.0" prefWidth="868.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+            <Tab closable="false" text="Menu Conexao">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="46.0" layoutY="75.0" text="URL de conexao com banco" />
+                        <Label layoutX="46.0" layoutY="101.0" text="EX: jdbc:mysql://localhost:3306/copa2014" />
+                        <TextField fx:id="txtFieldUrlConexao" layoutX="236.0" layoutY="70.0" prefHeight="25.0" prefWidth="340.0" />
+                        <Label layoutX="46.0" layoutY="142.0" text="Usuario" />
+                        <Label layoutX="46.0" layoutY="173.0" text="Senha" />
+                        <TextField fx:id="txtFieldUsuario" layoutX="117.0" layoutY="137.0" />
+                        <PasswordField fx:id="txtFieldPassword" layoutX="117.0" layoutY="168.0" />
+                        <Button fx:id="botaoTestarConexao" layoutX="46.0" layoutY="231.0" mnemonicParsing="false" onAction="#testarConexao" text="Testar" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Tipo Jogo">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelTipoJogo" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Tipo de Jogo">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFieldSalvarTipoJogo" layoutX="146.0" layoutY="132.0" />
+                        <Label layoutX="43.0" layoutY="137.0" text="Tipo de Jogo" />
+                        <Button fx:id="botaoSalvarTipoJogo" layoutX="42.0" layoutY="195.0" mnemonicParsing="false" onAction="#botaoSalvarTipoJogo" text="Salvar" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Tipo Gol">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="botaoSalvarTipoGol" layoutX="35.0" layoutY="186.0" mnemonicParsing="false" onAction="#botaoSalvarTipoGol" text="Salvar" />
+                        <Label layoutX="35.0" layoutY="130.0" text="Tipo de Gol" />
+                        <TextField fx:id="txtFieldSalvarTipoGol" layoutX="133.0" layoutY="125.0" />
+                        <Label fx:id="labelTipoGol" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Tipo de Gol">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Estadio">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="36.0" layoutY="96.0" text="Arquivo selecionado" />
+                        <TextField fx:id="txtFieldEstadio" layoutX="198.0" layoutY="91.0" prefHeight="25.0" prefWidth="505.0" />
+                        <Button fx:id="botaoArquivoEstadio" layoutX="36.0" layoutY="146.0" mnemonicParsing="false" onAction="#botaoArquivoEstadio" text="Selecionar arquivo" />
+                        <Label fx:id="labelEstadio" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Estadio">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="botaoSalvarEstadio" layoutX="36.0" layoutY="219.0" mnemonicParsing="false" onAction="#botaoSalvarEstadio" text="Salvar" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+          <Tab closable="false" text="Selecao">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="labelSelecao" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Seleção">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="botaoSalvarSelecao" layoutX="38.0" layoutY="224.0" mnemonicParsing="false" onAction="#botaoSalvarSelecao" text="Salvar" />
+                        <Button fx:id="botaoArquivoSelecao" layoutX="38.0" layoutY="158.0" mnemonicParsing="false" onAction="#botaoArquivoSelecao" text="Selecionar arquivo" />
+                        <TextField fx:id="txtFieldSelecao" layoutX="198.0" layoutY="111.0" prefHeight="25.0" prefWidth="505.0" />
+                        <Label layoutX="38.0" layoutY="116.0" text="Arquivo selecionado" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" text="Jogador">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="496.0" prefWidth="868.0">
+                     <children>
+                        <Label fx:id="labelJogador" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Jogador">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="botaoArquivoJogador" layoutX="27.0" layoutY="136.0" mnemonicParsing="false" onAction="#botaoArquivoJogador" text="Selecionar arquivo" />
+                        <TextField fx:id="txtFieldJogador" layoutX="182.0" layoutY="99.0" prefHeight="25.0" prefWidth="505.0" />
+                        <Label layoutX="27.0" layoutY="104.0" text="Arquivo selecionado" />
+                        <Button fx:id="botaoSalvarJogador" layoutX="27.0" layoutY="193.0" mnemonicParsing="false" onAction="#botaoSalvarJogador" text="Salvar" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+          <Tab closable="false" onSelectionChanged="#preencherSalvarJogo" text="Jogo">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="22.0" layoutY="172.0" prefHeight="23.0" prefWidth="107.0" text="Seleção 2" />
+                        <Label layoutX="24.0" layoutY="233.0" text="Estádio" />
+                        <Label layoutX="24.0" layoutY="118.0" prefHeight="23.0" prefWidth="107.0" text="Seleção 1" />
+                        <Button fx:id="botaoSalvarJogo" layoutX="19.0" layoutY="405.0" mnemonicParsing="false" onAction="#botaoSalvarJogo" text="Salvar" />
+                        <Label fx:id="labelJogo" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Jogo">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="295.0" text="Tipo de Jogo" />
+                        <TextField fx:id="txtFieldDataJogo" layoutX="154.0" layoutY="349.0" />
+                        <Label layoutX="22.0" layoutY="354.0" text="Data" />
+                        <ComboBox fx:id="comboS1" layoutX="155.0" layoutY="117.0" prefHeight="25.0" prefWidth="170.0" />
+                        <ComboBox fx:id="comboS2" layoutX="155.0" layoutY="171.0" prefHeight="25.0" prefWidth="170.0" />
+                        <ComboBox fx:id="comboEstadio" layoutX="155.0" layoutY="228.0" prefHeight="25.0" prefWidth="170.0" />
+                        <ComboBox fx:id="comboTipoJogo" layoutX="155.0" layoutY="283.0" prefHeight="25.0" prefWidth="170.0" />
+                        <Label layoutX="334.0" layoutY="354.0" text="DD-MM-AAAA" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab closable="false" onSelectionChanged="#preencherSalvarGol" text="Gol">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="txtFieldTempoGol" layoutX="107.0" layoutY="296.0" />
+                        <Label layoutX="14.0" layoutY="301.0" text="Tempo" />
+                        <Label fx:id="labelGol" layoutX="43.0" layoutY="38.0" prefHeight="39.0" prefWidth="350.0" text="Cadastrar Gol">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="238.0" prefHeight="23.0" prefWidth="61.0" text="Tipo" />
+                        <Label layoutX="24.0" layoutY="183.0" text="Jogador" />
+                        <Label layoutX="28.0" layoutY="125.0" prefHeight="23.0" prefWidth="107.0" text="Jogo" />
+                        <ComboBox fx:id="comboJogo" layoutX="108.0" layoutY="124.0" onHidden="#testeComboBox" prefHeight="25.0" prefWidth="346.0" />
+                        <ComboBox fx:id="comboJogador" layoutX="108.0" layoutY="178.0" prefHeight="25.0" prefWidth="170.0" />
+                        <ComboBox fx:id="comboTipoGol" layoutX="108.0" layoutY="237.0" prefHeight="25.0" prefWidth="170.0" />
+                        <Button fx:id="botaoSalvarGol" alignment="TOP_LEFT" layoutX="37.0" layoutY="365.0" mnemonicParsing="false" onAction="#botaoSalvarGol" text="Salvar" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="Penalti">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="51.0" layoutY="55.0" text="Jogo" />
+                        <ListView fx:id="listViewJogoPenalti" layoutX="111.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="354.0" layoutY="55.0" text="Jogador" />
+                        <ListView layoutX="411.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" />
+                        <RadioButton layoutX="677.0" layoutY="105.0" mnemonicParsing="false" text="Errou" />
+                        <RadioButton layoutX="677.0" layoutY="54.0" mnemonicParsing="false" text="Gol" />
+                        <Button layoutX="669.0" layoutY="189.0" mnemonicParsing="false" text="Inserir" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
