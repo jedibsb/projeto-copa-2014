@@ -3,7 +3,7 @@
 SRC:
 pasta contendo codigo fonte
 
-Untitled.jar:
+projeto copa.jar:
 programa para ser executado
 
 estadios.txt / selecoes.txt / jogadores.txt:
